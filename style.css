@@ -9,7 +9,7 @@ body{
     left:0;
     width:100%;
     height:100%;
-    z-index:-1;
+    z-index:-999;
     animation : fadeIn .5s linear;
   }
 
@@ -86,19 +86,85 @@ body{
     text-align: end;
     
 }
+
+.content2{
+  /* absolute는 문서의 원래의 위치와 상관 없이 위치를 지정할 수 있음 */
+  /* 하지만 가장 가까운 상위 요소를 기준으로 위치 결정(static은 제외) */
+  position: absolute;
+  /* inline-block은 하위 엘리먼트들의 크기만큼 현재 엘리먼트의 크기를 지정함 */
+  height: auto;
+  width: auto;
+ 
+  top:70px;
+}
+
 .circle {
     width: 10px;
     height: 10px; 
     border-radius: 70%;
     overflow: hidden;
-    top: 10%;
-    left: 10%;
     position: absolute;
+/* relative는 static으로 했을 때의 원래 위치부터 계산함/ y=100인 곳에서 요소가 시작되면 시작 위치가 x=0 y=100인거임 */
+    z-index: 1;
+    display: inline-block;
+    background-color: #503255d0;
+    /* left: 120px; 
+    top: 80px; */
+}
+
+.cirtran{
+  
+  top: 80px;
+  left: 120px;
+}
+.content2 > input{
+  position : absolute;
+  top:5px;
+  left:5px;
+  height: 30px;
+  background-color: rgba(73, 50, 95, 0.356);
+  outline: none;
+  
+  border-color: rgba(0, 0, 0, 0.582);
+  border-width: 2px; 
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.content2 > input::-ms-input-placeholder { color: rgb(0, 0, 0); font-size: 17px; padding-left: 5px;}
+.content2 >input::-webkit-input-placeholder { color: rgba(0, 0, 0); font-size: 17px; padding-left: 5px;}
+.content2 >input::-moz-placeholder { color: rgba(0, 0, 0);font-size: 17px; padding-left: 5px;}
+
+.content2 > textarea{
+  position : absolute;
+  top:6px;
+  left:6px;
+
+  width: 200px;
+  height: 300px;
+  background-color: rgba(30, 22, 37, 0.26);
+  border-color: rgba(0, 0, 0, 0.582);
+  border-width: 3px; 
+  font-size: 17px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  outline: none;
+
+}
+.content2  .fa-check{
+  position: absolute;
+  left: 180px;
+  top: 10px
+}
+.content2 .fa-times{
+ position: absolute;
+ left: 199px;
+  top : 10px;
 }
 
 span.light {
   position: relative;
   display: inline-block;
+  height: 150%;
+  width: 150%;
 }
   span.light::before {
     position: absolute;
@@ -124,7 +190,8 @@ span.light {
   background-color: transparent;
   outline: none;
   color: white;
-  
+  width: auto;
+  height: auto;  
 } 
 .plusBtn > svg{
 width: 50px;
@@ -133,22 +200,159 @@ height: 50px;
 
 }
 .bucketBox{
- position: relative;
- top :-50px;
-left : 0px;
-display: none;
-
+position: absolute;
+ top :100%;
+left:0%;
+height: 100px;
+background-color: rgba(73, 50, 95, 0.356);
+border-color: rgba(0, 0, 0, 0.582);
+border-style: ridge;
+border-width: 3px; 
 }
 .bucketBox > textarea{
-  
   color: rgba(0, 0, 0, 0.63);
-  height: 100px;
-  background-color: rgba(73, 50, 95, 0.356);
-  border-color: rgba(0, 0, 0, 0.582);
+background: none;
   outline: none;
-  border-style: ridge;
-  border-width: 3px;  
-  font-size: 20px;
-  font-weight: bold;
+ border: none;
+  font-size: 17px;
+  font-weight:bolder;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+@-webkit-keyframes spread {
+  0% {
+    width:0%;
+    
+  }
+  100% {
+    width:100%;
+
+  }
+}
+.bucketBoxAni{
+  animation : spread .2s linear;
+}
+.showingBucketBox{
+  display: inline-block;
+}
+.content1  .fa-check{
+ margin-left: 350px;
+  left: 95%;
+  top: 4%;
+}
+.content1  .fa-times{
+ 
+  left: 93%;
+  top : 4%;
+}
+
+.randPosition1{
+  width: 10px;
+  height: 10px; 
+  border-radius: 70%;
+  overflow: hidden;
+  top: 47px;
+  left: 127px;
+  position: absolute;
+/* relative는 static으로 했을 때의 원래 위치부터 계산함/ y=100인 곳에서 요소가 시작되면 시작 위치가 x=0 y=100인거임 */
+  z-index: 1;
+}
+.randPosition2{
+  width: 10px;
+  height: 10px; 
+  border-radius: 70%;
+  overflow: hidden;
+  top: 87px;
+  left: 419px;
+  position: absolute;
+/* relative는 static으로 했을 때의 원래 위치부터 계산함/ y=100인 곳에서 요소가 시작되면 시작 위치가 x=0 y=100인거임 */
+  z-index: 1;
+}
+.randPosition3{
+  width: 10px;
+  height: 10px; 
+  border-radius: 70%;
+  overflow: hidden;
+  top: 64px;
+  left: 576px;
+  position: absolute;
+/* relative는 static으로 했을 때의 원래 위치부터 계산함/ y=100인 곳에서 요소가 시작되면 시작 위치가 x=0 y=100인거임 */
+  z-index: 1;
+}
+.randPosition4{
+  width: 10px;
+  height: 10px; 
+  border-radius: 70%;
+  overflow: hidden;
+  top: 44px;
+  left: 666px;
+  position: absolute;
+/* relative는 static으로 했을 때의 원래 위치부터 계산함/ y=100인 곳에서 요소가 시작되면 시작 위치가 x=0 y=100인거임 */
+  z-index: 1;
+}
+.randPosition5{
+  width: 10px;
+  height: 10px; 
+  border-radius: 70%;
+  overflow: hidden;
+  top: 30px;
+  left: 166px;
+  position: absolute;
+/* relative는 static으로 했을 때의 원래 위치부터 계산함/ y=100인 곳에서 요소가 시작되면 시작 위치가 x=0 y=100인거임 */
+  z-index: 1;
+}
+.randPosition6{
+  width: 10px;
+  height: 10px; 
+  border-radius: 70%;
+  overflow: hidden;
+  top: 110px;
+  left: 144px;
+  position: absolute;
+/* relative는 static으로 했을 때의 원래 위치부터 계산함/ y=100인 곳에서 요소가 시작되면 시작 위치가 x=0 y=100인거임 */
+  z-index: 1;
+}
+.randPosition7{
+  width: 10px;
+  height: 10px; 
+  border-radius: 70%;
+  overflow: hidden;
+  top: 120px;
+  left: 70px;
+  position: absolute;
+/* relative는 static으로 했을 때의 원래 위치부터 계산함/ y=100인 곳에서 요소가 시작되면 시작 위치가 x=0 y=100인거임 */
+  z-index: 1;
+}
+.randPosition8{
+  width: 10px;
+  height: 10px; 
+  border-radius: 70%;
+  overflow: hidden;
+  top: 200px;
+  left: 50px;
+  position: absolute;
+/* relative는 static으로 했을 때의 원래 위치부터 계산함/ y=100인 곳에서 요소가 시작되면 시작 위치가 x=0 y=100인거임 */
+  z-index: 1;
+}
+.randPosition9{
+  width: 10px;
+  height: 10px; 
+  border-radius: 70%;
+  overflow: hidden;
+  top: 215px;
+  left: 6700px;
+  position: absolute;
+/* relative는 static으로 했을 때의 원래 위치부터 계산함/ y=100인 곳에서 요소가 시작되면 시작 위치가 x=0 y=100인거임 */
+  z-index: 1;
+}
+.randPosition10{
+  width: 10px;
+  height: 10px; 
+  border-radius: 70%;
+  overflow: hidden;
+  top: 240px;
+  left: 600px;
+  position: absolute;
+/* relative는 static으로 했을 때의 원래 위치부터 계산함/ y=100인 곳에서 요소가 시작되면 시작 위치가 x=0 y=100인거임 */
+  z-index: 1;
 }

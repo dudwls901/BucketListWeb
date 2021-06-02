@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
@@ -20,29 +21,38 @@
             <h1>00:00</h1>
         </div> 
         <h1 class="title">What's your Bucket</h1>
-       
-        <div class="plusBtn"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"></path></svg></div>
-        <div class = "bucketBox"  ><textarea rows ="2" cols = "30" style="resize:none "style = "border:none" ></textarea></div>
+        <div class="plusBtn"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"></path></svg>
+        </div>
+        <div class = "bucketBox showing bucketBoxAni">
+           
+        <i class="fas fa-check" aria-hidden="true" style="color:#0cc43aab; font-size: 20px;" ></i>
+        <i class="fas fa-times" aria-hidden="false" style="color:#af29299d; font-size: 22px; "></i>
+        <textarea rows ="2" cols = "40" style="resize:none; overflow : hidden;" ></textarea>
+        </div>
 
      </div>
 
     <h2 class="name"></h2>
     <span class="js-weather"></span>
-     <!-- <form class="js-toDoForm">
-        <input type="text" placeholder="Write Bucket" />
-    </form>
-    <ul class="js-toDoList"></ul> -->
 
-    <div class="circle" style="background: #503255d0;">
+<!-- <div class="content2">
+    <div class="circle" >
         <span class="light">　</span> 
     </div>
-    <span class="plusSpan" width="10px" height="10px" ><i class="fas fa-plus">aa</i></span>
+    <input class="showing" readonly type="text" maxlength="50" placeholder="NAME"> 
+    <textarea class="showing" rows ="2" cols = "40" style="resize:none; overflow : hidden;" ></textarea>
+    <i class="fas fa-check showing" aria-hidden="false" style="color:#0cc43aab; font-size: 20px;" ></i>
+    <i class="fas fa-times showing" aria-hidden="false" style="color:#af29299d; font-size: 22px; "></i>
+    
+</div> -->
 
 </body>
 <script src="bg.js"></script>
 <script src="clock.js"></script>
 <script src="naming.js"></script>
 <script src="weather.js"></script>
+<script src="bucket.js"></script>
+<script src="circle.js"></script>
 <!-- <script src="todo.js"></script> -->
 
 </html>

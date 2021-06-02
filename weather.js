@@ -3,6 +3,10 @@ const COORDS = 'coords';
 const API_KEY = "75e3d5d68154ec30fff878a68e6aef2a";
 
 
+function clickWeather(event){
+    console.log(event);
+    
+}
 function getWeather(lat,lng){
     fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=${API_KEY}&units=metric`
     ).then(function(response){
