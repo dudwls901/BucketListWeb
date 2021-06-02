@@ -3,10 +3,13 @@ const COORDS = 'coords';
 const API_KEY = "75e3d5d68154ec30fff878a68e6aef2a";
 
 
+<<<<<<< HEAD
 function clickWeather(event){
     console.log(event);
     
 }
+=======
+>>>>>>> 65b5f8872d19819156ad0e6ff9fe6e537c5a1f1f
 function getWeather(lat,lng){
     fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=${API_KEY}&units=metric`
     ).then(function(response){
@@ -14,7 +17,11 @@ function getWeather(lat,lng){
     }).then(function(json){
         const temperature = json.main.temp;
         const place = json.name;
+<<<<<<< HEAD
         weather.innerText = ` ${place}`+'\n'+`${temperature}º`;
+=======
+        weather.innerText = `${temperature} @ ${place}`;
+>>>>>>> 65b5f8872d19819156ad0e6ff9fe6e537c5a1f1f
         console.log(json);
     });
     //then 데이터가 우리한테 완전히 넘어 왔을 때! 다음 함수 호출
